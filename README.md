@@ -1,7 +1,7 @@
 
-#React Development Challenges: A Level
+# React Development Challenges: A Level
 
-##¿Cómo decidió las opciones técnicas y arquitectónicas utilizadas como parte de su solución?
+## ¿Cómo decidió las opciones técnicas y arquitectónicas utilizadas como parte de su solución?
   El proceso de selección de las opciones técnicas y arquitectónicas utilizadas en mi solución fue guiado por varios factores, incluyendo:
 
 Escalabilidad: Aseguré que mi solución pudiera manejar un gran volumen de datos y solicitudes simultáneas.
