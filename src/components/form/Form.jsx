@@ -29,10 +29,6 @@ export function AddTask() {
 			e.preventDefault();
 			setError('Description is required');
 			return;
-		} else if (!tasks.status) {
-			e.preventDefault();
-			setError('Status is required');
-			return;
 		} else if (!tasks.date) {
 			e.preventDefault();
 			setError('Date is required');

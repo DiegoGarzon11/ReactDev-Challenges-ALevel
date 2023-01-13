@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { Global } from '../../context/global';
 import { Link } from 'react-router-dom';
+import { Carga } from '../Carga';
 
 export function Inicio({ claseNueva }) {
 	const { task, deleteTask } = useContext(Global);
@@ -8,6 +9,7 @@ export function Inicio({ claseNueva }) {
 
 	return (
 		<>
+			<Carga></Carga>
 			<h1 className='text-center text-black p-12 pt-2 text-lg'>
 				Task Manager
 			</h1>
@@ -60,9 +62,16 @@ export function Inicio({ claseNueva }) {
 						<td className='border border-black text-center'>
 							{task.description}
 						</td>
-						<td className='border border-black text-center'>
-							{task.status}
-						</td>
+						{task.status === '' ? (
+							<td className='border border-black text-center'>
+								Pending
+							</td>
+						) : (
+							<td className='border border-black text-center'>
+								{task.status}
+							</td>
+						)}
+
 						{query.matches ? (
 							<td className='hidden'>
 								{/\s/g.test(task.tag) ? (
