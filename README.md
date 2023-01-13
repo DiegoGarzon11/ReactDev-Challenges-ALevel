@@ -1,8 +1,11 @@
 
-# Nombre del proyecto
 
-[![Build Status](https://travis-ci.org/username/projectname.svg?branch=master)](https://travis-ci.org/username/projectname)
+
+# React Development Challenges: A Level
+
+[![Build Status](https://travis-ci.org/DiegoGarzon11/ReactDev-Challenges-ALevel.svg?branch=master)](https://travis-ci.org/DiegoGarzon11/ReactDev-Challenges-ALevel)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+
 
 Una breve descripción del proyecto.
 
