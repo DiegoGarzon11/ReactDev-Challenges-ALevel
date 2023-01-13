@@ -15,7 +15,6 @@ export function AddTask() {
 		date: '',
 		tag: '',
 	});
-	console.log(tasks);
 	const handleChange = (e) => {
 		setTask({ ...tasks, [e.target.name]: e.target.value });
 	};
@@ -72,62 +71,67 @@ export function AddTask() {
 					<h2 className='mb-7 text-3xl text-white'>
 						{tasks.id ? 'Editing a task' : 'Creating a task'}
 					</h2>
-					<div className='mb-5'>
+					<div className='mb-5 max-lg:flex flex-col'>
 						<label htmlFor='Description'>Title</label>
 						<input
 							type='text'
 							name='title'
 							id=''
 							value={tasks.title}
-							className='py-3 px-4 text-white focus:bg-gray-300 focus:text-black bg-gray-400 w-full focus:outline-none'
+							className='py-3 px-4 text-white focus:bg-gray-300 focus:text-black bg-gray-400 w-full focus:outline-none '
 							onChange={handleChange}
+							required
 						/>
 					</div>
-					<div className='mb-5'>
+					<div className='mb-5 max-lg:flex flex-col'>
 						<label htmlFor='desciption'>Description</label>
 						<input
 							type='text'
 							name='description'
 							value={tasks.description}
 							id=''
-							className='py-3 px-4 text-white focus:bg-gray-300 focus:text-black bg-gray-400 w-full focus:outline-none'
+							className='py-3 px-4 text-white focus:bg-gray-300 focus:text-black bg-gray-400 w-full focus:outline-none  '
 							onChange={handleChange}
+							required
 						/>
 					</div>
-					<div className='mb-5'>
+					<div className='mb-5 max-lg:flex flex-col'>
 						<label htmlFor='Status'>Status</label>
 						<select
 							type='op'
 							name='status'
 							value={tasks.status}
 							onChange={handleChange}
-							className='py-3 px-4 text-white focus:bg-gray-300 focus:text-black bg-gray-400 w-full focus:outline-none'>
+							required
+							className='py-3 px-4 text-white focus:bg-gray-300 focus:text-black bg-gray-400 w-full focus:outline-none '>
 							<option value='Pending'>Pending</option>
 							<option value='In Process'>In Process</option>
 							<option value='Imcomplete'>Incomplete</option>
 							<option value='Complete'>Complete</option>
 						</select>
 					</div>
-					<div className='mb-5'>
+					<div className='mb-5 max-lg:flex flex-col'>
 						<label htmlFor='Tags'>Tags</label>
 						<input
 							type='tag'
 							name='tag'
 							id=''
 							onChange={handleChange}
+							required
 							value={tasks.tag}
-							className='py-3 px-4 text-white focus:bg-gray-300 focus:text-black bg-gray-400 w-full focus:outline-none'
+							className='py-3 px-4 text-white focus:bg-gray-300 focus:text-black bg-gray-400 w-full focus:outline-none '
 						/>
 					</div>
-					<div className='mb-5'>
+					<div className='mb-5 max-lg:flex flex-col'>
 						<label htmlFor='Date'>Date</label>
 						<input
 							type='date'
 							name='date'
 							id=''
 							onChange={handleChange}
+							required
 							value={tasks.date}
-							className='py-3 px-4 text-white focus:bg-gray-300 focus:text-black bg-gray-400 w-full focus:outline-none'
+							className='py-3 px-4 text-white focus:bg-gray-300 focus:text-black bg-gray-400 w-full focus:outline-none '
 						/>
 					</div>
 
